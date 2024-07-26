@@ -1,0 +1,5 @@
+#Stream Api
+i)stream api was introduce in java 1.8version.
+ii)These stream are related to collection frameworks.These streams are very different from io stream.
+iii)io streams are the sequence of data. 
+iv)io stream is used to read and write the data.
