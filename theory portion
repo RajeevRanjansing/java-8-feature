@@ -1,0 +1,50 @@
+# java 8(1.8version)feature
+
+//lambda expression is establish in java 1.8version
+1)lambda is anonymous function
+2)Anonymous function means no name,no modifier,no return type
+
+# code(we of normal function)
+class X{
+public static void A(){
+    System.out.println("Test");
+}
+public static void main(String args[]){
+    A();
+}
+}
+
+
+# code(how to write)
+()->{
+    //content remain same
+    System.out.println("Test");
+}
+
+# Benefit of lambda expression
+i)Reduce thhe line of code
+ii)parallel execution
+iii)To write more readable, Maintainable,concise code
+
+# Important rule of lambda
+i)If the body of Lambda Expression contain only one statement the curly braces are optional
+ii)java compileralso inter the type of variable passed in arguments,hence type is optional.
+
+* Noramal function
+import java.util.*;
+class prac{
+    public static void add(int x,int y){
+        System.out.println("sum of the number is "+(x+y));
+    }
+    public static void main(String args[]){
+        add(3,5);
+    }
+}
+
+* in lambda expression
+
+
+# Functional interface
+i)if the interface contains only one abstract methods then it is Functional interface.
+ii)To call the lambda we require funcional interface.
+iii)Lambda is used to implement functional interface in very simple and short manner.
