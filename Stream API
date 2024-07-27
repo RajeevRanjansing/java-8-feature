@@ -188,3 +188,38 @@ class api{
         System.out.println(b);                //output=4
     }
 }
+
+//program 13
+//Based on the length of String, arrange the String in ascending order
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<String>a=Arrays.asList("Rajeev","Aman","Aaksh","Adi");
+        Comparator<String>c=(x,y)->{
+            int i=x.length();
+            int j=y.length();
+            return Integer.compare(i,j);
+        };
+        List<String>z=a.stream().sorted(c).toList();
+        System.out.println(z);
+    }
+}
+
+
+//program 14
+//Based on the length of String, arrange the String in descending order
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<String>a=Arrays.asList("Rajeev","Aman","Aaksh","Adi");
+        Comparator<String>c=(x,y)->{
+            int i=x.length();
+            int j=y.length();
+            return Integer.compare(j,i);
+        };
+        List<String>z=a.stream().sorted(c).toList();
+        System.out.println(z);
+    }
+}
