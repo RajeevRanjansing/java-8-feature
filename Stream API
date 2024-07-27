@@ -139,3 +139,15 @@ class api{
         System.out.println(b);            //output=[9, 45, 54, 56, 67, 87, 89]
     }
 }
+
+//program 9
+//to arrange the element in descending in order
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=List.of(1,2,3,4,5,6,7,8,9,0);
+        List<Integer>b=a.stream().sorted((x,y)->(x<y)?1 : (x>y)? -1 : 0).toList();
+        System.out.println(b);                                                        //output=[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    }
+}
