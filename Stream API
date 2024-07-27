@@ -72,7 +72,7 @@ class api{
 
 
 //program 4
-
+//filter is used to filter the data
 import java.util.*;
 class api{
     public static void main(String args[]){
@@ -90,5 +90,27 @@ class api{
         List<Integer>a=Arrays.asList(0,5,6,10,33,10,35);
         List<Integer>b=a.stream().filter(i->i%5==0).toList();
         System.out.println(b);
+    }
+}
+
+#Map
+//Map is used to transform each element of stream
+
+//program 6
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=Arrays.asList(1,2,3,5,6,7,8,9,0);
+
+        //to find the pass student
+        List<Integer>b=a.stream().filter(i->i>5).toList();
+        System.out.println("Pass students are "+ b);
+
+        //to find the fail student and give 5 grace marks to each
+
+        List<Integer>c=a.stream().filter(i->i<=5).map(i->i+5).toList();
+        System.out.println(c);
+
     }
 }
