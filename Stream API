@@ -177,3 +177,14 @@ class api{
     }
 }
 
+//program 12
+//count the number of string
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<String>a=List.of("Aman","adii","akash","Ayush");
+        long b=a.stream().count();
+        System.out.println(b);                //output=4
+    }
+}
