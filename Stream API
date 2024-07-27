@@ -81,3 +81,14 @@ class api{
         System.out.println(b);
     }
 }
+
+//program 5
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=Arrays.asList(0,5,6,10,33,10,35);
+        List<Integer>b=a.stream().filter(i->i%5==0).toList();
+        System.out.println(b);
+    }
+}
