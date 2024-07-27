@@ -3,3 +3,81 @@ i)stream api was introduce in java 1.8version.
 ii)These stream are related to collection frameworks.These streams are very different from io stream.
 iii)io streams are the sequence of data. 
 iv)io stream is used to read and write the data.
+
+//program 1
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        ArrayList<Integer>a=new ArrayList<>();
+        a.add(1);
+        a.add(2);
+        a.add(3);
+        a.add(4);
+        a.add(5);
+        a.add(6);
+        a.add(7);
+        a.add(8);
+
+        or 
+
+        List<Integer>b=List.of(2,4,50,21,22,67); //we can't add element in it
+
+        List<Integer>c=new ArrayList<>();
+        for(Integer i:c){
+            if(i%2==0){
+                b.add(i);
+            }
+        }
+        System.out.println(c);
+        System.out.println(i);    //output=[2,4,50,22]
+
+    }
+}
+
+//program 2
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=List.of(2,3,4,5,6,7,8,9);
+
+        List<Integer> even=new ArrayList<>();
+
+        //without using stream
+        for(Integer i:a){
+            if(i%2==0){
+                even.add(i);
+            }
+        }
+        System.out.println(a);
+        System.out.println(even);      //output=[2,4,6,8]
+
+    }
+}
+
+//program 3
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>list1=List.of(2,3,4,5,6,7,8,9,0);
+
+        //ussing stream
+        Stream<Integer>stream=list1.stream();
+        List<Integer>newList=stream.filter(i-> i%2 == 0).toList();
+        System.out.println(newList);
+    }
+}
+
+
+//program 4
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=List.of(0,2,3,4,5,6,7,8,9);
+        List<Integer>b=a.stream().filter(i->i%2 !=0).toList();
+        System.out.println(b);
+    }
+}
