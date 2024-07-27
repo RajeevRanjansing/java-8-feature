@@ -223,3 +223,35 @@ class api{
         System.out.println(z);
     }
 }
+
+
+//program 15
+
+//min() return the first element, not minimum number.
+//max() return the last element, not maximum number.
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=List.of(1,2,3,4,5,6,7,8,9);
+    
+        Integer b=a.stream().min((x,y)->Integer.compare(x,y)).get();
+        System.out.println(b);
+
+//It arrange the element in ascending order.and the first element is 1.So,output=1
+    }
+}
+
+//program 16
+
+import java.util.*;
+class api{
+    public static void main(String args[]){
+        List<Integer>a=List.of(1,2,3,4,5,6,7,8,9);
+    
+        Integer b=a.stream().min((x,y)->Integer.compare(y,x)).get();
+        System.out.println(b);
+
+//It arrange the element in descending order.and the first element is 9.So,output=9
+    }
+}
