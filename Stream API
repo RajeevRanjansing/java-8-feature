@@ -166,7 +166,7 @@ class api{
 }
 
 //program 11
-//Another way to reverse the order
+//Another way to arrange the element in descending order
 
 import java.util.*;
 class api{
