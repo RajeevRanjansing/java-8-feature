@@ -1,1 +1,64 @@
+//program 1
 
+class optionl{
+    public static void main(String args[]){
+        String str=null;
+        if(str==null){
+            System.out.println("This is null object");
+        }
+        else{
+            System.out.println("Length of the String is "+str.length());
+        }
+    }
+}
+
+//program 2
+import java.util.*;
+class optionl{
+    public static void main(String args[]){
+        String str="Java is my favourite language";
+        Optional<String>optional=Optional.ofNullable(str);
+        System.out.println(optional.isPresent());
+        System.out.println(optional.get());
+        System.out.println(str.length());
+    }
+}
+
+//program 3
+
+import java.util.*;
+class optionl{
+    public static void main(String args[]){
+        int a=1;
+       Optional<Integer>optional= Optional.ofNullable(a);
+       System.out.println(optional.isPresent());        //output=true
+       System.out.println(optional.get());              //output=1
+    }
+}
+
+//program 4
+
+import java.util.*;
+class optionl{
+    public static void main(String args[]){
+        String str="Rajeev";
+        Optional<String>optional=Optional.ofNullable(str);
+        System.out.println(optional.isPresent());
+       // System.out.println(optional.get());
+        System.out.println(optional.orElse("No value is this object"));  //when null is present then print this
+    }
+}
+
+//program 5
+
+import java.util.*;
+class optional{
+    public static Optional<String> getName(){
+            String str="Rajeev";
+            return Optional.ofNullable(str);
+    }
+    public static void main(String args[]){
+        Optional<String>name=getName();
+        System.out.println(name.orElse("No value"));
+    }
+}
