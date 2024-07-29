@@ -1,0 +1,22 @@
+class construct{
+    public static void main(String args[]){
+        System.out.println("Learning Constructor Reference");
+        Provider provider=Student::new;
+       
+       Student student=provider.getStudent();
+       student.display();
+    }
+}
+
+class Student{
+    public Student(){
+        System.out.println("Creating object of student class");
+    }
+    public void display(){
+        System.out.println("I am a student");
+    }
+}
+
+interface Provider{
+    public Student getStudent();
+}
